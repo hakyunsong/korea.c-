@@ -8,30 +8,36 @@ public:
     Circle(int r);
     ~Circle();
     double getArea();
+
 };
 
-Circle::Circle() {
+Circle::Circle(){
     radius = 1;
-    cout<<"반지름 "<<radius<<"원 생성"<<endl;
+    cout<<"반지름"<<radius<<"원 생성"<<endl;
 }
 
 Circle::Circle(int r){
     radius = r;
     cout<<"반지름"<<radius<<"원 생성"<<endl;
 }
-
 Circle::~Circle(){
     cout<<"반지름"<<radius<<"원 소멸"<<endl;
-
 }
 
 double Circle::getArea(){
-    return radius*radius*3.14;
+    return radius *radius*3.14;
+}
 
+Circle globalDonut(1000);
+Circle globalPizza(2000);
+
+void f(){
+    Circle fDonut(100);
+    Circle fPizza(200);
 }
 
 int main(){
-    Circle donut;
-    Circle pizza(30);
-    return 0;
+    Circle mainDonut();
+    Circle mainPizza(30);
+    f();
 }
